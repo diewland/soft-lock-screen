@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admin_desc">Apply for permission to lock screen</string>
+    <string name="app_name">Soft Lock Screen</string>
+    <string name="admin_label">Soft Lock Screen</string>
+</resources>

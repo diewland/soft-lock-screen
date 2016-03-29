@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="diewland.screen.off"
+    android:versionCode="15"
+    android:versionName="2.3" android:installLocation="auto">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".TurnScreenOffActivity"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.NoDisplay" >
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver
+			android:name="util.LockScreenUtil$MyAdmin"
+			android:label="@string/admin_label"
+			android:description="@string/admin_desc"
+			android:permission="android.permission.BIND_DEVICE_ADMIN" >
+			<meta-data
+				android:name="android.app.device_admin"
+				android:resource="@xml/my_admin" />
+			<intent-filter>
+				<action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+			</intent-filter>
+		</receiver>
+		
+        <receiver android:name=".MyWidget" android:label="Soft Lock Widget">
+	        <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/> 
+	        </intent-filter>
+	        <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+	    </receiver>  
+        <receiver android:name=".MyWidgetS" android:label="Soft Lock Widget Small">
+	        <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/> 
+	        </intent-filter>
+	        <meta-data android:name="android.appwidget.provider" android:resource="@xml/widgets" />
+	    </receiver>
+        <receiver android:name=".MyWidgetS2" android:label="Soft Lock Widget Small2">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widgets2" />
+        </receiver>
+
+    </application>
+</manifest>
