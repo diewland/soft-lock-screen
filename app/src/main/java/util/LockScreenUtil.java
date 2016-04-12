@@ -23,12 +23,12 @@ public class LockScreenUtil {
 	public static void run(Context context){
     	DevicePolicyManager mDPM;
     	ComponentName mAdminName;
-       	KeyguardManager keyguardManager;
-       	KeyguardLock lock;
+       	// KeyguardManager keyguardManager;
+       	// KeyguardLock lock;
         mDPM = (DevicePolicyManager)context.getSystemService(Context.DEVICE_POLICY_SERVICE);
         mAdminName = new ComponentName(context, MyAdmin.class);
-       	keyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
-       	lock = keyguardManager.newKeyguardLock(Context.KEYGUARD_SERVICE);
+       	// keyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
+       	// lock = keyguardManager.newKeyguardLock(Context.KEYGUARD_SERVICE);
         
         boolean isAdminActive = mDPM.isAdminActive(mAdminName);
         
@@ -48,7 +48,7 @@ public class LockScreenUtil {
         }
         else {
           	// lock.disableKeyguard();
-           	lock.reenableKeyguard();
+           	// lock.reenableKeyguard();
         	mDPM.lockNow();
         }
 	}
