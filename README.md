@@ -1,1 +1,1 @@
-<a href='https://www.dropbox.com/s/wjk47p04ihtedme/soft-lock-screen-2.4.apk?dl=0'>Download APK</a>
+<a href='https://drive.google.com/open?id=0B_P-p9FGn12ZcVdfcE5FSlJaZGM'>Download APK</a>
