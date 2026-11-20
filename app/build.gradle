@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 android {
     namespace "diewland.screen.off"
-    compileSdkVersion 34
+    compileSdkVersion 36
     defaultConfig {
         applicationId "diewland.screen.off"
         minSdkVersion 16
-        targetSdkVersion 35
-        versionCode 25
-        versionName '2.5'
+        targetSdkVersion 36
+        versionCode 26
+        versionName '2.6'
     }
     buildTypes {
         release {
